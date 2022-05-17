@@ -88,7 +88,7 @@ const SingleAnimalInfo = ({ animal }) => {
 const Wrapper = styled.div`
   height: fit-content;
   width: 100vw;
-  padding: 2rem 0.5rem;
+  padding: 2rem 1.25rem;
   text-align: left;
 
   .title-container {

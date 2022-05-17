@@ -73,14 +73,14 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     background-color: salmon;
     border-radius: 25px;
     .mask {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       img {
         width: 100%;
         height: 100%;
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
   }
 
   .gallery {
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
