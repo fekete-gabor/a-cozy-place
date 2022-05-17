@@ -126,7 +126,7 @@ const Wrapper = styled.section`
     border-radius: 25px;
     z-index: 1;
     height: max-content;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
     img {
       width: 100.1%;
       height: 100%;
@@ -143,7 +143,7 @@ const Wrapper = styled.section`
     z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     div {
       display: grid;
       grid-template-rows: auto 1fr auto;
