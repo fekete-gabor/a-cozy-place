@@ -19,10 +19,8 @@ const FormMask = () => {
       const top = document.querySelector(".top");
       top.scrollIntoView();
     } else {
-      {
         const bottom = document.querySelector(".bottom");
         bottom.scrollIntoView();
-      }
     }
   };
 
