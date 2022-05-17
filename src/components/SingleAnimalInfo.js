@@ -86,10 +86,11 @@ const SingleAnimalInfo = ({ animal }) => {
 };
 
 const Wrapper = styled.div`
-  height: fit-content;
   width: 100vw;
+  height: fit-content;
   padding: 2rem 1.25rem;
   text-align: left;
+  background:transparent;
 
   .title-container {
     h1 {
