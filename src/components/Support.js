@@ -126,6 +126,7 @@ const Wrapper = styled.section`
     border-radius: 25px;
     z-index: 1;
     height: max-content;
+    margin: 1rem;
     img {
       width: 100.1%;
       height: 100%;
@@ -142,7 +143,7 @@ const Wrapper = styled.section`
     z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1rem 1.5rem;
+    margin: 1rem;
     div {
       display: grid;
       grid-template-rows: auto 1fr auto;
@@ -179,6 +180,7 @@ const Wrapper = styled.section`
       }
     }
   }
+
   @media screen and (min-width: 700px) {
     header {
       img {
@@ -191,6 +193,7 @@ const Wrapper = styled.section`
       grid-template-rows: 1fr 1fr;
     }
   }
+
   @media screen and (min-width: 1300px) {
     .main-container {
       grid-template-columns: repeat(2, 1fr);
