@@ -142,6 +142,7 @@ const Wrapper = styled.section`
     z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
+    padding: 1rem 1.5rem;
     div {
       display: grid;
       grid-template-rows: auto 1fr auto;
