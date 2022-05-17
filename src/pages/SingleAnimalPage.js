@@ -27,6 +27,7 @@ const SingleAnimal = () => {
 
   useEffect(() => {
     fetchSingleAnimal(id);
+    // eslint-disable-next-line
   }, [id]);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const SingleAnimal = () => {
         navigate("/gazdikereso");
       }, 5000);
     }
+    // eslint-disable-next-line
   }, [isError]);
 
   if (isLoading) {
