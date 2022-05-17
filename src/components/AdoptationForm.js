@@ -88,10 +88,10 @@ const Wrapper = styled.div`
   form {
     .form-control {
       display: grid;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
       label {
-        font-size: 1.15rem;
+        font-size: 1.2rem;
       }
       .form-input {
         width: 250px;
@@ -117,6 +117,7 @@ const Wrapper = styled.div`
   .btn-container {
     display: flex;
     justify-content: center;
+    padding-bottom: 2rem;
   }
 
   #subject {
@@ -124,32 +125,15 @@ const Wrapper = styled.div`
     border: solid 3px grey;
   }
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 500px) {
     form {
       .form-control {
-        display: grid;
         gap: 1rem;
-        margin-bottom: 2rem;
-        label {
-          font-size: 1.25rem;
-        }
         .form-input {
           width: 100%;
-          max-width: 400px;
           font-size: 1.1rem;
           padding: 0.5rem 2rem;
-          text-transform: lowercase;
           letter-spacing: 3px;
-          border-radius: 25px;
-          border: solid 3px orange;
-          transition: var(--transition);
-          &:focus {
-            border: solid 3px orangered;
-            outline: none;
-          }
-        }
-        textarea {
-          resize: none;
         }
       }
     }

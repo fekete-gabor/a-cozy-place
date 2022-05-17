@@ -20,18 +20,6 @@ const AnimalFilterForm = () => {
     <Wrapper>
       <div className="main-container">
         <form onSubmit={(e) => e.preventDefault()} id="filter">
-          {/* search input */}
-          <div className="form-control">
-            <h5>Név</h5>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={(e) => updateFilters(e)}
-              className="search-input"
-            />
-          </div>
-          {/* end of search input */}
           {/* type input */}
           <div className="form-control">
             <h5>Faj</h5>
@@ -120,6 +108,18 @@ const AnimalFilterForm = () => {
             </select>
           </div>
           {/* end of gender input */}
+          {/* search input */}
+          <div className="form-control">
+            <h5>Név</h5>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={(e) => updateFilters(e)}
+              className="search-input"
+            />
+          </div>
+          {/* end of search input */}
           <button
             className="clear-btn"
             type="button"

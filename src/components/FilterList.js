@@ -52,7 +52,10 @@ const AnimalFilterList = () => {
                     <p>{desc && `${desc.substring(0, 70)}...`}</p>
                   </div>
                   <div className="link-container">
-                    <Link to={`${replaceLetters(type)}/${id}`}>
+                    <Link
+                      to={`${replaceLetters(type)}/${id}`}
+                      style={{ background: color }}
+                    >
                       Részletek, {type === "kutyák" ? "Woof!" : "Meow!"}
                     </Link>
                   </div>
