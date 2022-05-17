@@ -73,14 +73,14 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     background-color: salmon;
     border-radius: 25px;
     .mask {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       img {
         width: 100%;
         height: 100%;
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
   }
 
   .gallery {
-    width: 250px;
+    width: 200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -101,6 +101,28 @@ const Wrapper = styled.div`
       width: 100%;
       height: 100px;
       object-fit: cover;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .main {
+      width: 300px;
+      height: 300px;
+      .mask {
+        width: 300px;
+        height: 300px;
+        img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+
+    .gallery {
+      width: 300px;
+      img {
+        height: 175px;
+      }
     }
   }
 
