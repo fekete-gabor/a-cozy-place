@@ -164,14 +164,14 @@ export const formatMyDate = (value) => {
 };
 
 // fetch animals
-export const all_animals_url = `https://www.a-cozy-place.herokuapp.com/api/animals?populate=*`;
+export const all_animals_url = `https://a-cozy-place.herokuapp.com/api/animals?populate=*`;
 
 // fetch single animal by ID
-export const single_animal_url = `https://www.a-cozy-place.herokuapp.com/api/animals/`;
+export const single_animal_url = `https://a-cozy-place.herokuapp.com/api/animals/`;
 
 // fetch news
-export const all_news_url = `https://www.a-cozy-place.herokuapp.com/api/blog-posts?populate=*`;
+export const all_news_url = `https://a-cozy-place.herokuapp.com/api/blog-posts?populate=*`;
 
 // fetch single news
-export const single_news_url = `https://www.a-cozy-place.herokuapp.com/api/blog-posts/`;
+export const single_news_url = `https://a-cozy-place.herokuapp.com/api/blog-posts/`;
 
