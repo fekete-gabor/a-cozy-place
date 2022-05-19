@@ -69,6 +69,7 @@ const SingleAnimal = () => {
 const Wrapper = styled.section`
   height: fit-content;
   overflow: hidden;
+  min-height: 100vh;
 
   .main-container {
     display: grid;

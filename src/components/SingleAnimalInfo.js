@@ -90,7 +90,7 @@ const Wrapper = styled.div`
   height: fit-content;
   padding: 2rem 1.25rem;
   text-align: left;
-  background:transparent;
+  background: transparent;
 
   .title-container {
     h1 {

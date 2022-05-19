@@ -40,7 +40,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   display: grid;
   text-align: center;
-  padding: 3rem 1rem 0 ;
+  padding: 3rem 1rem 0;
   border-bottom: solid 3px #fa4151;
 
   article {

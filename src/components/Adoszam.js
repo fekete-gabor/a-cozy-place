@@ -7,8 +7,9 @@ const Adoszam = ({ color }) => {
   const { setAlert } = useMainContext();
 
   const adószám = useRef(null);
+
   return (
-    <Wrapper>
+    <Wrapper id="adoszam">
       <h2
         className="title"
         style={{
@@ -39,6 +40,9 @@ const Adoszam = ({ color }) => {
 };
 
 const Wrapper = styled.div`
+  z-index: 1;
+  background-color: whitesmoke;
+
   .title {
     border-radius: 25px;
     padding: 0.25rem;

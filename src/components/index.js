@@ -28,6 +28,7 @@ import AdoptationForm from "./AdoptationForm";
 import ContactsInfo from "./ContactsInfo";
 import AdoptationFormMask from "./AdoptationFormMask";
 import Parallax from "./Parallax";
+import SupportHero from "./SupportHero";
 
 export {
   SharedLayout,
@@ -60,4 +61,5 @@ export {
   ContactsInfo,
   AdoptationFormMask,
   Parallax,
+  SupportHero,
 };

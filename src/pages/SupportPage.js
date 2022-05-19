@@ -1,18 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import { Adoszam, Tamogatas, Internship } from "../components";
+import { IoMdPaw } from "react-icons/io";
+import {
+  SupportHero,
+  Adoszam,
+  Tamogatas,
+  Internship,
+  GoogleMaps,
+} from "../components";
 
 const Support = () => {
   return (
     <Wrapper>
-      <h2>support</h2>
-      <Adoszam />
+      <SupportHero />
+      <Adoszam color={"goldenrod"} />
+      <IoMdPaw className="icon" />
       <Tamogatas />
+      <IoMdPaw className="icon" />
       <Internship />
+      <GoogleMaps />
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  .icon {
+    display: block;
+    margin: 3rem auto;
+    font-size: 3rem;
+    color: brown;
+  }
+`;
 
 export default Support;
