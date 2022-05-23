@@ -9,7 +9,7 @@ const SingleAnimal = () => {
   const navigate = useNavigate();
 
   const {
-    single_news,
+    // single_news,
     single_news_loading: isLoading,
     single_news_error: isError,
     fetchSingleNews,

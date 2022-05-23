@@ -143,6 +143,7 @@ export const MainProvider = ({ children }) => {
 
   useEffect(() => {
     paginate();
+    // eslint-disable-next-line
   }, [state.news, state.current_index]);
 
   return (
