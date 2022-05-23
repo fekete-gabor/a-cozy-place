@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import reducer from "../reducers/main_reducer";
+import pagination from "../utils/pagination";
 import {
   all_animals_url,
   single_animal_url,
@@ -24,6 +25,8 @@ import {
   FETCH_SINGLE_NEWS_BEGIN,
   FETCH_SINGLE_NEWS_SUCCESS,
   FETCH_SINGLE_NEWS_ERROR,
+  PAGINATE,
+  CHANGE_PAGE_INDEX,
 } from "../actions";
 
 const initialState = {
@@ -42,8 +45,12 @@ const initialState = {
   single_news_error: false,
   single_news: {},
   featured_news: [],
+  current_index: 0,
+  indexes: [],
+  paginated: [],
   animal_color: "",
   animal_name: "",
+  all_urls: [],
 };
 
 const MainContext = React.createContext();
@@ -117,10 +124,26 @@ export const MainProvider = ({ children }) => {
     }
   };
 
+  const paginate = () => {
+    if (state.news.length === 0) return;
+    dispatch({
+      type: PAGINATE,
+      payload: pagination(state.news, 6),
+    });
+  };
+
+  const changePageIndex = (e) => {
+    dispatch({ type: CHANGE_PAGE_INDEX, payload: e });
+  };
+
   useEffect(() => {
     fetchAnimals();
     fetchNews();
   }, []);
+
+  useEffect(() => {
+    paginate();
+  }, [state.news, state.current_index]);
 
   return (
     <MainContext.Provider
@@ -132,6 +155,7 @@ export const MainProvider = ({ children }) => {
         stopAlert,
         fetchSingleAnimal,
         fetchSingleNews,
+        changePageIndex,
       }}
     >
       {children}

@@ -59,7 +59,10 @@ export const AnimalFilterProvider = ({ children }) => {
 
   const paginate = () => {
     if (state.all_animals.length === 0) return;
-    dispatch({ type: PAGINATE, payload: pagination(state.filtered_animals) });
+    dispatch({
+      type: PAGINATE,
+      payload: pagination(state.filtered_animals, 4),
+    });
   };
 
   const changePageIndex = (e) => {

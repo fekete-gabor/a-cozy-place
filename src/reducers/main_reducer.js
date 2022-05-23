@@ -15,6 +15,8 @@ import {
   FETCH_SINGLE_NEWS_BEGIN,
   FETCH_SINGLE_NEWS_SUCCESS,
   FETCH_SINGLE_NEWS_ERROR,
+  PAGINATE,
+  CHANGE_PAGE_INDEX,
 } from "../actions";
 
 const main_reducer = (state, action) => {
@@ -50,11 +52,23 @@ const main_reducer = (state, action) => {
       (animal) => animal.attributes.featured === true
     );
 
+    const temp = action.payload
+      .map((animal) => animal.attributes.img.data)
+      .map((animal) => {
+        return animal.map((item) => item.attributes.url);
+      })
+      .map((value) => {
+        return value.map((url) => url);
+      })
+      .flat()
+      .slice(0, 20);
+
     return {
       ...state,
       isLoading: false,
       animals: action.payload,
       featured_animals,
+      all_urls: temp,
     };
   }
 
@@ -112,6 +126,15 @@ const main_reducer = (state, action) => {
 
   if (action.type === FETCH_NEWS_ERROR) {
     return { ...state, isLoading: false, isError: true };
+  }
+
+  if (action.type === PAGINATE) {
+    const temp = action.payload[state.current_index];
+    return { ...state, indexes: action.payload, paginated: temp };
+  }
+
+  if (action.type === CHANGE_PAGE_INDEX) {
+    return { ...state, current_index: action.payload };
   }
 
   // ***** FETCH SINGLE NEWS *****

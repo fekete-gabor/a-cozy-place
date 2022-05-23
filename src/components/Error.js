@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useFilterContext } from "../context/animal_filter_context";
 import dog from "../assets/dog_cartoon_1.jpg";
 
-const Error = ({ btnType }) => {
+const Error = ({ btnType, text }) => {
   const { clearAnimalFilters } = useFilterContext();
 
   return (
@@ -12,7 +12,7 @@ const Error = ({ btnType }) => {
         <img src={dog} alt="cartoon dog" />
       </div>
       <div className="button-container">
-        <h3>Úgy tűnik ilyen névvel nincs nálunk senki.</h3>
+        <h3>{text}</h3>
         <button
           className="btn"
           style={{ display: `${btnType ? btnType : "none"}` }}

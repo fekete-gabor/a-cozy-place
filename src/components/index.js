@@ -29,6 +29,7 @@ import ContactsInfo from "./ContactsInfo";
 import AdoptationFormMask from "./AdoptationFormMask";
 import Parallax from "./Parallax";
 import SupportHero from "./SupportHero";
+import AboutUs from "./AboutUs";
 
 export {
   SharedLayout,
@@ -62,4 +63,5 @@ export {
   AdoptationFormMask,
   Parallax,
   SupportHero,
+  AboutUs,
 };

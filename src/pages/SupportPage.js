@@ -13,7 +13,7 @@ const Support = () => {
   return (
     <Wrapper>
       <SupportHero />
-      <Adoszam color={"goldenrod"} />
+      <Adoszam underlineColor={"goldenrod"} />
       <IoMdPaw className="icon" />
       <Tamogatas />
       <IoMdPaw className="icon" />

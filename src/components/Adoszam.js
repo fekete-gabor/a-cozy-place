@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { AiOutlineCopy } from "react-icons/ai";
 import { useMainContext } from "../context/main_context";
 
-const Adoszam = ({ color }) => {
+const Adoszam = ({ underlineColor }) => {
   const { setAlert } = useMainContext();
 
   const adószám = useRef(null);
@@ -13,7 +13,7 @@ const Adoszam = ({ color }) => {
       <h2
         className="title"
         style={{
-          textDecoration: `underline ${color ? color : null}`,
+          textDecoration: `underline ${underlineColor ? underlineColor : null}`,
         }}
       >
         Adomány

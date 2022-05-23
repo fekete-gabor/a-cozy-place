@@ -64,7 +64,10 @@ const AnimalFilterList = () => {
             );
           })
         ) : (
-          <Error btnType={"flex"} />
+          <Error
+            btnType={"flex"}
+            text={"Úgy tűnik ilyen névvel nincs nálunk senki."}
+          />
         )}
         {paginated && (
           <div className="btn-container">

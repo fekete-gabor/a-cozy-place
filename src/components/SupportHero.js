@@ -5,7 +5,7 @@ import { useMainContext } from "../context/main_context";
 import { gsap } from "gsap/dist/gsap";
 
 const SupportHero = () => {
-  const { animals } = useMainContext();
+  const { animals, all_urls: images } = useMainContext();
 
   useEffect(() => {
     gsap.utils.toArray(".img").forEach((img, index) => {
@@ -27,11 +27,8 @@ const SupportHero = () => {
       <div className="main-container">
         <div className="layer"></div>
         <div className="bg-container">
-          {animals.map((animal) => {
-            return animal.attributes.img.data.map((item, index) => {
-              const img = item.attributes.url;
-              return <img src={img} alt="main" key={index} className="img" />;
-            });
+          {images.map((img, index) => {
+            return <img src={img} alt="main" key={index} className="img" />;
           })}
         </div>
         <div className="btn-container">
@@ -55,7 +52,7 @@ const Wrapper = styled.section`
 
   .main-container {
     width: 100%;
-    height: calc(3 * 225px + 1rem);
+    height: calc(4 * 151px + 1rem);
     background: bisque;
     position: relative;
   }
@@ -66,24 +63,25 @@ const Wrapper = styled.section`
     height: 100%;
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.225),
-      rgba(0, 0, 0, 0.225)
+      rgba(0, 0, 0, 0.125),
+      rgba(0, 0, 0, 0.125)
     );
+    z-index: 2;
   }
 
   .bg-container {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     width: 100%;
     height: 100%;
     gap: 0.25rem;
     padding: 0.25rem;
+    margin: 0 auto;
     z-index: -1;
     img {
-      width: 225px;
-      height: 225px;
+      width: 100%;
+      height: 150px;
       object-fit: cover;
       border-radius: 25px;
     }
@@ -94,7 +92,7 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     width: 100%;
     height: max-content;
@@ -124,11 +122,43 @@ const Wrapper = styled.section`
     .btn-container {
       gap: 1rem;
     }
+
     .button {
       cursor: pointer;
       transform: translateY(-2rem);
       padding: 1rem;
       font-size: 1.25rem;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .main-container {
+      height: calc(3 * 200px + 1rem);
+    }
+
+    .bg-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1225px) {
+    .bg-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1500px;
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 25px;
+      }
     }
   }
 `;

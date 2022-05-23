@@ -158,20 +158,21 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 5rem auto;
+    margin: 0 rem auto;
     padding: 0.25rem;
     text-align: center;
     div {
       margin: 0 auto;
       article {
         display: grid;
+        gap: 2rem;
         h2 {
-          margin: 1rem 0;
+          margin-top: 1rem;
           text-decoration: underline orangered;
         }
         li {
-          margin: 1rem 0;
           p {
+            margin: 1rem 0;
             font-size: 1.25rem;
             font-weight: 600;
           }

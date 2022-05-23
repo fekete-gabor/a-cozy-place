@@ -194,7 +194,7 @@ const Wrapper = styled.section`
   @media screen and (min-width: 600px) {
     .main-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       padding: 5rem;
     }
   }

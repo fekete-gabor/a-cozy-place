@@ -28,7 +28,7 @@ const Animals = () => {
         <div className="form-container">
           <PinnedNews />
           <div className="sticky">
-            <Adoszam color={"orange"} />
+            <Adoszam underlineColor={"orange"} />
             <SmallFilterBackgrounds />
           </div>
         </div>

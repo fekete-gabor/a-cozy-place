@@ -46,7 +46,9 @@ const SingleAnimal = () => {
   if (isError) {
     return (
       <Wrapper>
-        <Error />;
+        <div style={{ height: "100vh" }}>
+          <Error text={"Úgy tűnik ilyen névvel nincs nálunk senki."} />;
+        </div>
       </Wrapper>
     );
   }

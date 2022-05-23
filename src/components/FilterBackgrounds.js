@@ -21,6 +21,7 @@ const AnimalFilterBackgrounds = () => {
   useEffect(() => {
     const first = firstContainerRef.current;
     const second = secondContainerRef.current;
+    const wrapper = wrapperRef.current;
 
     const handleChange = (target, width = "50", filter = "0") => {
       gsap.to(target, {
@@ -44,7 +45,7 @@ const AnimalFilterBackgrounds = () => {
         handleChange(second, 60, 0);
       });
 
-      wrapperRef.current.addEventListener("mouseleave", () => {
+      wrapper.addEventListener("mouseleave", () => {
         handleChange(first);
         handleChange(second);
       });
