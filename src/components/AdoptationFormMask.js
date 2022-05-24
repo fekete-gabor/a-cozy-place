@@ -16,11 +16,10 @@ const FormMask = () => {
   const handleChange = () => {
     if (mediaQuery) {
       gsap.to([".form-main", ".form-mask"], { width: "50vw" });
-      const top = document.querySelector(".top");
+      const top = document.querySelector(".wrapper");
       top.scrollIntoView();
     } else {
-      const bottom = document.querySelector(".bottom");
-      bottom.scrollIntoView();
+      document.querySelector(".form-container").scrollIntoView();
     }
   };
 
@@ -37,7 +36,6 @@ const FormMask = () => {
         start: "top 90%",
         end: "bottom center",
         scrub: true,
-        markers: true,
       },
     });
     gsap.set(".info", { autoAlpha: 0 });
@@ -48,8 +46,7 @@ const FormMask = () => {
   }, []);
 
   return (
-    <Wrapper>
-      <div className="top"></div>
+    <Wrapper className="wrapper">
       <div
         className="form-main"
         style={{ background: `linear-gradient(45deg, ${color} 0%, #fff 80%)` }}
@@ -81,7 +78,6 @@ const FormMask = () => {
           </div>
         </div>
       </div>
-      <div className="bottom"></div>
     </Wrapper>
   );
 };
@@ -89,7 +85,7 @@ const FormMask = () => {
 const Wrapper = styled.div`
   display: grid;
   height: 100%;
-  border-bottom: solid 3px #fa4151;
+  min-height: 100vh;
 
   .form-main {
     position: relative;
