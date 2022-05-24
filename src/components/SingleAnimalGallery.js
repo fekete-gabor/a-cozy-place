@@ -13,7 +13,7 @@ const SingleAnimalGallery = ({ animal }) => {
   let mediaQuery = useMediaQuery("(min-width: 600px)");
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ delay: 0.1 });
 
     if (mediaQuery) {
       tl.from(".mainImg", { scale: 2 })

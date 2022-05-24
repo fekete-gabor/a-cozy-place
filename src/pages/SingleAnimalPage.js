@@ -27,6 +27,10 @@ const SingleAnimal = () => {
   } = useMainContext();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     fetchSingleAnimal(id);
     // eslint-disable-next-line
   }, [id]);

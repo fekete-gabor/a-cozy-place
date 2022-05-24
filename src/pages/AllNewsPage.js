@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import newsBG from "../assets/news_bg.jpg";
 import { BsFillPinAngleFill } from "react-icons/bs";
 import { formatMyDate } from "../utils/helpers";
@@ -8,6 +8,10 @@ import styled from "styled-components";
 const News = () => {
   const { current_index, indexes, paginated, changePageIndex } =
     useMainContext();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Wrapper>

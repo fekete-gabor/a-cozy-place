@@ -24,6 +24,10 @@ const FormMask = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (!mediaQuery) {
       gsap.to([".form-main", ".form-mask"], { width: "100vw" });
     }

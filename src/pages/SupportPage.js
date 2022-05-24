@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { IoMdPaw } from "react-icons/io";
 import {
@@ -10,6 +10,10 @@ import {
 } from "../components";
 
 const Support = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <SupportHero />

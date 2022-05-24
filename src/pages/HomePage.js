@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import {
   Hero,
@@ -15,6 +15,10 @@ import { useMainContext } from "../context/main_context";
 
 const Home = () => {
   const { is_loading } = useMainContext();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (is_loading) {
     return <Spinner />;
