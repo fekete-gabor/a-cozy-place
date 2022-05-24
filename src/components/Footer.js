@@ -6,9 +6,8 @@ const Footer = () => {
   return (
     <Wrapper>
       <p>
-        &copy; {date} <span>a cozy place</span>, all rights reserved{" "}
-        <span className="heart">&hearts;</span> created by{" "}
-        <span>Gábor Fekete</span>
+        &copy; {date} <span>a cozy place</span>, all rights reserved. created by{" "}
+        <span className="heart">&hearts;</span> <span>Gábor Fekete</span>
       </p>
     </Wrapper>
   );
@@ -31,7 +30,7 @@ const Wrapper = styled.footer`
   }
 
   .heart {
-    color: hotpink;
+    color: goldenrod;
   }
 `;
 

@@ -22,11 +22,11 @@ import {
 const main_reducer = (state, action) => {
   // ***** SIDEBAR *****
   if (action.type === OPEN_SIDEBAR) {
-    return { ...state, isSidebarOpen: true };
+    return { ...state, is_sidebar_open: true };
   }
 
   if (action.type === CLOSE_SIDEBAR) {
-    return { ...state, isSidebarOpen: false };
+    return { ...state, is_sidebar_open: false };
   }
 
   // ***** ALERT *****
@@ -44,7 +44,7 @@ const main_reducer = (state, action) => {
 
   // ***** FETCH ANIMALS *****
   if (action.type === FETCH_ANIMALS_BEGIN) {
-    return { ...state, isLoading: true };
+    return { ...state, is_loading: true };
   }
 
   if (action.type === FETCH_ANIMALS_SUCCESS) {
@@ -65,7 +65,7 @@ const main_reducer = (state, action) => {
 
     return {
       ...state,
-      isLoading: false,
+      is_loading: false,
       animals: action.payload,
       featured_animals,
       all_urls: temp,
@@ -73,7 +73,7 @@ const main_reducer = (state, action) => {
   }
 
   if (action.type === FETCH_ANIMALS_ERROR) {
-    return { ...state, isLoading: false, isError: true };
+    return { ...state, is_loading: false, is_error: true };
   }
 
   // ***** FETCH SINGLE ANIMAL *****
@@ -108,7 +108,7 @@ const main_reducer = (state, action) => {
 
   // ***** FETCH NEWS *****
   if (action.type === FETCH_NEWS_BEGIN) {
-    return { ...state, isLoading: true };
+    return { ...state, is_loading: true };
   }
 
   if (action.type === FETCH_NEWS_SUCCESS) {
@@ -118,14 +118,14 @@ const main_reducer = (state, action) => {
 
     return {
       ...state,
-      isLoading: false,
+      is_loading: false,
       news: action.payload,
       featured_news: featured,
     };
   }
 
   if (action.type === FETCH_NEWS_ERROR) {
-    return { ...state, isLoading: false, isError: true };
+    return { ...state, is_loading: false, is_error: true };
   }
 
   if (action.type === PAGINATE) {

@@ -149,7 +149,7 @@ const Wrapper = styled.div`
         border-radius: 25px;
         background: orange;
         text-transform: uppercase;
-        letter-spacing: var(--spacing);
+
         transition: var(--transition);
         &:hover {
           background-color: orangered;
@@ -190,7 +190,15 @@ const Wrapper = styled.div`
         a {
           font-size: 1.15rem;
           font-weight: 600;
+          letter-spacing: var(--spacing);
         }
+      }
+    }
+
+    .link-container {
+      a {
+        padding: 1rem;
+        margin: 1rem;
       }
     }
   }

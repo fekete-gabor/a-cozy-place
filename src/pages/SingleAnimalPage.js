@@ -7,6 +7,7 @@ import {
   Contacts,
   GoogleMaps,
   ContactsInfo,
+  Spinner,
 } from "../components";
 import { useMainContext } from "../context/main_context";
 import { useParams, useNavigate } from "react-router-dom";
@@ -20,8 +21,8 @@ const SingleAnimal = () => {
 
   const {
     single_animal,
-    single_animal_loading: isLoading,
-    single_animal_error: isError,
+    single_animal_loading: is_loading,
+    single_animal_error: is_error,
     fetchSingleAnimal,
   } = useMainContext();
 
@@ -31,19 +32,19 @@ const SingleAnimal = () => {
   }, [id]);
 
   useEffect(() => {
-    if (isError) {
+    if (is_error) {
       setTimeout(() => {
         navigate("/gazdikereso");
       }, 5000);
     }
     // eslint-disable-next-line
-  }, [isError]);
+  }, [is_error]);
 
-  if (isLoading) {
-    return <h2>loading...</h2>;
+  if (is_loading) {
+    return <Spinner />;
   }
 
-  if (isError) {
+  if (is_error) {
     return (
       <Wrapper>
         <div style={{ height: "100vh" }}>

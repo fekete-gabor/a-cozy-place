@@ -30,6 +30,7 @@ import AdoptationFormMask from "./AdoptationFormMask";
 import Parallax from "./Parallax";
 import SupportHero from "./SupportHero";
 import AboutUs from "./AboutUs";
+import Spinner from "./Spinner";
 
 export {
   SharedLayout,
@@ -64,4 +65,5 @@ export {
   Parallax,
   SupportHero,
   AboutUs,
+  Spinner,
 };

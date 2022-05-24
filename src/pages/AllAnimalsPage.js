@@ -6,15 +6,16 @@ import {
   Adoszam,
   PinnedNews,
   SmallFilterBackgrounds,
+  Spinner,
 } from "../components";
 import { useMainContext } from "../context/main_context";
 import styled from "styled-components";
 
 const Animals = () => {
-  const { isLoading } = useMainContext();
+  const { is_loading } = useMainContext();
 
-  if (isLoading) {
-    return <h2>loading...</h2>;
+  if (is_loading) {
+    return <Spinner />;
   }
 
   return (
@@ -22,10 +23,10 @@ const Animals = () => {
       <FilterBackgrounds />
       <FilterForm />
       <div className="main-container">
-        <div className="list-container">
+        <div>
           <FilterList />
         </div>
-        <div className="form-container">
+        <div>
           <PinnedNews />
           <div className="sticky">
             <Adoszam underlineColor={"orange"} />

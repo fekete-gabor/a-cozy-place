@@ -2,15 +2,12 @@ import React, { useRef, useEffect } from "react";
 import dogBG from "../assets/dog_large_bg.jpg";
 import { Adoszam } from "./index";
 import { HashLink as Link } from "react-router-hash-link";
-import { useMainContext } from "../context/main_context";
 import styled from "styled-components";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SupportComponent = () => {
-  const { isLoading } = useMainContext();
-
   const myRef = useRef();
   const imgRef = useRef();
   const articleRef = useRef();
@@ -48,7 +45,7 @@ const SupportComponent = () => {
         tl.to(article, { translateX: "-5rem" }, "-=1");
       },
     });
-  }, [isLoading]);
+  }, []);
 
   return (
     <Wrapper ref={myRef}>

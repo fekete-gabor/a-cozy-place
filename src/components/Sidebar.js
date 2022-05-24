@@ -9,7 +9,7 @@ import { useFilterContext } from "../context/animal_filter_context";
 import styled from "styled-components";
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar, alert } = useMainContext();
+  const { is_sidebar_open, closeSidebar, alert } = useMainContext();
   const { clearAnimalFilters } = useFilterContext();
 
   const handleChange = () => {
@@ -20,7 +20,7 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <aside
-        className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+        className={`${is_sidebar_open ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="nav-center">
           <div className="sidebar-header">
@@ -65,7 +65,6 @@ const Wrapper = styled.div`
   text-align: center;
   z-index: 998;
   width: 100%;
-  background-color: #bcffa0;
 
   .nav-center {
     background: var(--clr-primary-1);
@@ -74,6 +73,7 @@ const Wrapper = styled.div`
 
   .sidebar-header {
     display: flex;
+    background: #bcffa0;
     justify-content: space-between;
     align-items: center;
     width: 90vw;

@@ -38,7 +38,7 @@ const FeaturedAnimals = () => {
   return (
     <Wrapper>
       <div className="title-container">
-        <h2>ők is gazdára várnak!</h2>
+        <h2>ők is gazdira várnak!</h2>
       </div>
       <div className="main-container">
         {featured_animals.map((animal, index) => {
@@ -61,7 +61,7 @@ const FeaturedAnimals = () => {
               <header>
                 <img src={img} alt="img of an animal" />
                 <Link
-                  to={`gazdikereso/${replaceLetters(type)}/${id}`}
+                  to={`/gazdikereso/${replaceLetters(type)}/${id}`}
                   onClick={() => fetchSingleAnimal(id)}
                 >
                   <BsSearch />
@@ -84,7 +84,7 @@ const FeaturedAnimals = () => {
                   onClick={() => fetchSingleAnimal(id)}
                   style={{ background: color }}
                 >
-                  <Link to={`gazdikereso/${replaceLetters(type)}/${id}`}>
+                  <Link to={`/gazdikereso/${replaceLetters(type)}/${id}`}>
                     Részletek
                   </Link>
                 </div>
@@ -93,11 +93,18 @@ const FeaturedAnimals = () => {
           );
         })}
       </div>
+      <div className="btn-container">
+        <Link to={"/gazdikereso"} className="btn" type="button">
+          nem tudok dönteni, mutasd mindet
+        </Link>
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  margin-top: 3rem;
+
   .title-container {
     padding: 2rem 0;
     text-align: center;
@@ -106,7 +113,7 @@ const Wrapper = styled.section`
   .main-container,
   .title-container {
     background-color: bisque;
-    width: 95vw;
+    width: 95%;
     margin: 0 auto;
     padding: 1rem;
     display: flex;
@@ -189,6 +196,14 @@ const Wrapper = styled.section`
       color: whitesmoke;
       transition: var(--transition);
     }
+  }
+
+  .btn-container {
+    width: 95%;
+    background: bisque;
+    margin: 0rem auto;
+    text-align: center;
+    padding-bottom: 1rem;
   }
 
   @media screen and (min-width: 600px) {

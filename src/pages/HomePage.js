@@ -9,18 +9,15 @@ import {
   FeaturedNews,
   Newsletter,
   GoogleMaps,
+  Spinner,
 } from "../components";
 import { useMainContext } from "../context/main_context";
 
 const Home = () => {
-  const { isLoading } = useMainContext();
+  const { is_loading } = useMainContext();
 
-  if (isLoading) {
-    return (
-      <Wrapper>
-        <h2>loading...</h2>
-      </Wrapper>
-    );
+  if (is_loading) {
+    return <Spinner />;
   }
 
   return (

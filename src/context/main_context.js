@@ -30,11 +30,11 @@ import {
 } from "../actions";
 
 const initialState = {
-  isSidebarOpen: false,
+  is_sidebar_open: false,
   alert: false,
   alertText: "",
-  isLoading: false,
-  isError: false,
+  is_loading: false,
+  is_error: false,
   animals: [],
   single_animal_loading: true,
   single_animal_error: false,

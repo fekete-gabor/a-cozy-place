@@ -32,13 +32,10 @@ const SupportHero = () => {
           })}
         </div>
         <div className="btn-container">
-          <Link to="#adoszam" className="button">
-            adószám
-          </Link>
-          <Link smooth to="#targyi-tamogatas" className="button">
+          <Link to="#targyi-tamogatas" className="button">
             tárgyi támogatás
           </Link>
-          <Link smooth to="#onkentes-munka" className="button">
+          <Link to="#onkentes-munka" className="button">
             önkéntes munka
           </Link>
         </div>

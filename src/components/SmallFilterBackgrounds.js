@@ -11,7 +11,7 @@ const SmallFilterBackgrounds = () => {
   return (
     <Wrapper>
       <h2 className="title">állataink</h2>
-      <div>
+      <section>
         <div className="img-container">
           <Link to="#form">
             <img
@@ -34,15 +34,13 @@ const SmallFilterBackgrounds = () => {
             />
           </Link>
         </div>
-      </div>
+      </section>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
   margin: 3rem 0;
-  /* position: sticky;
-  top: 170px; */
 
   .title {
     margin: 3rem 0;
@@ -52,8 +50,8 @@ const Wrapper = styled.div`
     text-align: center;
   }
 
-  div {
-    display: flex;
+  section {
+    display: grid;
     justify-content: center;
     gap: 1.5rem;
     .img-container {
@@ -72,6 +70,12 @@ const Wrapper = styled.div`
           opacity: 0.7;
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    section {
+      display: flex;
     }
   }
 `;
