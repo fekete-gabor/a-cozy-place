@@ -34,18 +34,17 @@ const FormMask = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".form-main",
-        start: "top 60%",
-        end: "bottom bottom",
+        start: "top 90%",
+        end: "bottom center",
         scrub: true,
+        markers: true,
       },
     });
     gsap.set(".info", { autoAlpha: 0 });
 
-    tl.to(".form-mask", { clipPath: "circle(100% at 50% 50%)" }).to(
-      ".info",
-      { autoAlpha: 1 },
-      0
-    );
+    tl.to(".form-mask", {
+      clipPath: "circle(100% at 50% 50%)",
+    }).to(".info", { autoAlpha: 1 }, 0);
   }, []);
 
   return (
@@ -89,23 +88,24 @@ const FormMask = () => {
 
 const Wrapper = styled.div`
   display: grid;
-  height: fit-content;
+  height: 100%;
+  border-bottom: solid 3px #fa4151;
 
   .form-main {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     .form-mask {
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       overflow: hidden;
       clip-path: circle(50% at 100% 50%);
       img {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         object-fit: cover;
       }
       .info {

@@ -128,7 +128,6 @@ const Wrapper = styled.div`
   @media screen and (min-width: 500px) {
     form {
       .form-control {
-        gap: 1rem;
         .form-input {
           width: 100%;
           font-size: 1.1rem;

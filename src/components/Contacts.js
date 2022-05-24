@@ -24,11 +24,11 @@ const Wrapper = styled.div`
 
   .main-container {
     display: grid;
+    min-height: 100vh;
   }
 
   .mask-container {
     z-index: 3;
-    height: min-content;
   }
 
   .form-container {
