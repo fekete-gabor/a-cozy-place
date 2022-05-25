@@ -42,9 +42,9 @@ const AnimalFilterList = () => {
                     <h2>{name}</h2>
                   </div>
                   <div className="tag-container">
-                    {breed && <p>fajta: {breed},</p>}
+                    {breed && type !== "macskák" && <p>fajta: {breed},</p>}
+                    {size && type !== "macskák" && <p>méret: {size},</p>}
                     {gender && <p>nem: {gender},</p>}
-                    {size && <p>méret: {size},</p>}
                     {dob && <p>születési idő: {dob},</p>}
                     {dor && <p>hozzánk érkezett: {dor},</p>}
                   </div>
