@@ -3,7 +3,6 @@ import styled from "styled-components";
 import useMediaQuery from "../utils/mediaQuery";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { start } from "@popperjs/core";
 gsap.registerPlugin(ScrollTrigger);
 
 const SingleAnimalGallery = ({ animal }) => {

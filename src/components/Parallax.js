@@ -37,11 +37,11 @@ const Parallax = () => {
     return (
       <Wrapper>
         <div className="img-container">
-          <img src={layer1} className="parallax" data-depth="0.1" alt="img" />
-          <img src={layer2} className="parallax" data-depth="0.2" alt="img" />
-          <img src={layer3} className="parallax" data-depth="0.4" alt="img" />
-          <img src={layer4} className="parallax" data-depth="0.5" alt="img" />
-          <img src={layer5} className="parallax" data-depth="0.6" alt="img" />
+          <img src={layer1} className="parallax" data-depth="0.1" alt="layer" />
+          <img src={layer2} className="parallax" data-depth="0.2" alt="layer" />
+          <img src={layer3} className="parallax" data-depth="0.4" alt="layer" />
+          <img src={layer4} className="parallax" data-depth="0.5" alt="layer" />
+          <img src={layer5} className="parallax" data-depth="0.6" alt="layer" />
         </div>
       </Wrapper>
     );
@@ -50,7 +50,7 @@ const Parallax = () => {
   return (
     <Wrapper>
       <div className="img-container">
-        <img src={contactsBG} />
+        <img src={contactsBG} alt="main" />
       </div>
     </Wrapper>
   );
