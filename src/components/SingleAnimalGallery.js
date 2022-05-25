@@ -3,6 +3,7 @@ import styled from "styled-components";
 import useMediaQuery from "../utils/mediaQuery";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { start } from "@popperjs/core";
 gsap.registerPlugin(ScrollTrigger);
 
 const SingleAnimalGallery = ({ animal }) => {
@@ -13,8 +14,12 @@ const SingleAnimalGallery = ({ animal }) => {
   let mediaQuery = useMediaQuery("(min-width: 600px)");
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.1 });
-
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".mainImg",
+        start: "top center",
+      },
+    });
     if (mediaQuery) {
       tl.from(".mainImg", { scale: 2 })
         .to(

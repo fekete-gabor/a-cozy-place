@@ -15,7 +15,7 @@ const AnimalFilterBackgrounds = () => {
   const firstContainerRef = useRef(null);
   const secondContainerRef = useRef(null);
 
-  let mediaQuery = useMediaQuery("(min-width: 800px)");
+  const mediaQuery = useMediaQuery("(min-width: 800px)");
 
   // add animation
   useEffect(() => {

@@ -42,11 +42,10 @@ export const AnimalFilterProvider = ({ children }) => {
     let value;
     if (e.target.hasAttribute("data-value")) {
       value = e.target.dataset.value;
-      dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
     } else {
       value = e.target.value;
-      dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
     }
+    dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   };
 
   const filterAnimals = () => {

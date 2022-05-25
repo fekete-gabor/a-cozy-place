@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import contactsBG from "../assets/contacts_bg.jpg";
 import layer1 from "../assets/l1.png";
 import layer2 from "../assets/l2.png";
 import layer3 from "../assets/l3.png";
 import layer4 from "../assets/l4.png";
 import layer5 from "../assets/l5.png";
+import useMediaQuery from "../utils/mediaQuery";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Parallax = () => {
+  const mediaQuery = useMediaQuery("(min-width: 1080px)");
+
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 1300px)": function () {
+      "(min-width: 1080px)": function () {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".parallax",
@@ -27,16 +31,26 @@ const Parallax = () => {
         });
       },
     });
-  }, []);
+  }, [mediaQuery]);
+
+  if (mediaQuery) {
+    return (
+      <Wrapper>
+        <div className="img-container">
+          <img src={layer1} className="parallax" data-depth="0.1" alt="img" />
+          <img src={layer2} className="parallax" data-depth="0.2" alt="img" />
+          <img src={layer3} className="parallax" data-depth="0.4" alt="img" />
+          <img src={layer4} className="parallax" data-depth="0.5" alt="img" />
+          <img src={layer5} className="parallax" data-depth="0.6" alt="img" />
+        </div>
+      </Wrapper>
+    );
+  }
 
   return (
     <Wrapper>
       <div className="img-container">
-        <img src={layer1} className="parallax" data-depth="0.1" alt="img" />
-        <img src={layer2} className="parallax" data-depth="0.2" alt="img" />
-        <img src={layer3} className="parallax" data-depth="0.4" alt="img" />
-        <img src={layer4} className="parallax" data-depth="0.5" alt="img" />
-        <img src={layer5} className="parallax" data-depth="0.6" alt="img" />
+        <img src={contactsBG} />
       </div>
     </Wrapper>
   );
@@ -48,11 +62,18 @@ const Wrapper = styled.section`
     height: 100vh;
     overflow: hidden;
     img {
-      position: fixed;
-      z-index: -1;
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  @media screen and (min-width: 1080px) {
+    .img-container {
+      img {
+        position: fixed;
+        z-index: -1;
+      }
     }
   }
 `;

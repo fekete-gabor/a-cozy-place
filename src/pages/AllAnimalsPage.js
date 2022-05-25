@@ -41,6 +41,7 @@ const Animals = () => {
 const Wrapper = styled.section`
   width: 100%;
   height: min-content;
+  background-color: whitesmoke;
 
   .main-container {
     display: grid;

@@ -41,6 +41,7 @@ const SmallFilterBackgrounds = () => {
 
 const Wrapper = styled.div`
   margin: 3rem 0;
+  padding-bottom: 2rem;
 
   .title {
     margin: 3rem 0;

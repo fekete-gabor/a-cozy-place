@@ -58,10 +58,10 @@ const FormMask = () => {
         <div className="form-mask">
           <img src={formMask} alt="dog in a party hat" />
           <div className="info">
-            <h1>
+            <h2>
               felkeltette <span>{name}</span> az érdeklődésed? <br />
               vedd fel velünk a kapcsolatot,
-            </h1>
+            </h2>
             <div className="media-icons">
               <ul className="media-icons">
                 {socialMedia.map((media) => {
@@ -75,7 +75,7 @@ const FormMask = () => {
               </ul>
             </div>
             <br />
-            <h1> vagy írj nekünk!</h1>
+            <h2> vagy írj nekünk!</h2>
             <div className="button-container" onClick={() => handleChange()}>
               <button className="button">üzenetet küldök</button>
             </div>
@@ -92,12 +92,12 @@ const Wrapper = styled.div`
   min-height: 100vh;
 
   .form-main {
-    position: relative;
     width: 100vw;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     .form-mask {
       width: 100vw;
       height: 100%;
@@ -109,14 +109,22 @@ const Wrapper = styled.div`
         object-fit: cover;
       }
       .info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
         text-align: center;
-        h1 {
+        h2 {
           color: whitesmoke;
+          font-size: clamp(1rem, 1.75rem, 2rem);
           span {
             text-transform: uppercase;
             letter-spacing: 6.5px;
@@ -130,11 +138,11 @@ const Wrapper = styled.div`
   .media-icons {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1.5rem;
     margin-top: 2rem;
     a {
       color: whitesmoke;
-      font-size: 2rem;
+      font-size: clamp(1rem, 1.75rem, 2rem);
       transition: var(--transition);
       &:hover {
         color: #3cfa75;
@@ -145,15 +153,15 @@ const Wrapper = styled.div`
   .button-container {
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
     .button {
       cursor: pointer;
       background: none;
       border: solid 2px whitesmoke;
-      padding: 1.5rem;
+      padding: 1rem;
       color: whitesmoke;
-      font-size: 2rem;
+      font-size: clamp(1rem, 1.75rem, 2rem);
       text-transform: uppercase;
       letter-spacing: 2px;
       transition: var(--transition);
