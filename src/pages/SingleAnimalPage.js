@@ -86,7 +86,7 @@ const Wrapper = styled.section`
     width: max-content;
   }
 
-  @media screen and (min-width: 1350px) {
+  @media screen and (min-width: 1400px) {
     .main-container {
       grid-template-columns: repeat(2, 1fr);
     }

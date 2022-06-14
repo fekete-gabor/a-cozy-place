@@ -13,7 +13,7 @@ const AdoptationForm = () => {
     <Wrapper>
       <h2>írj nekünk</h2>
       <form action={process.env.REACT_APP_NEWSLETTER_ENDPOINT} method="POST">
-        {name && (
+        {window.location.href.indexOf("elerhetosegek") > -1 || (
           <div className="form-control">
             <label htmlFor="#subject">Tárgy</label>
             <input

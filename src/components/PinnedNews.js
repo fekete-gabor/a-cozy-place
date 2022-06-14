@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { formatMyDate } from "../utils/helpers";
@@ -7,6 +7,10 @@ import { useFilterContext } from "../context/animal_filter_context";
 
 const PinnedNews = () => {
   const { pinned_news } = useFilterContext();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Wrapper>

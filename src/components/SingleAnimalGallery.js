@@ -7,8 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SingleAnimalGallery = ({ animal }) => {
   const { color } = animal;
-  const allImages = animal.img.data;
-  const [main, setMain] = useState(allImages[0].attributes.url);
+  const images = animal.img.data;
+  const [mainImg, setMainImg] = useState(images[0].attributes.url);
 
   let mediaQuery = useMediaQuery("(min-width: 600px)");
 
@@ -40,21 +40,21 @@ const SingleAnimalGallery = ({ animal }) => {
         <div className="mask">
           <img
             className="mainImg"
-            src={main}
+            src={mainImg}
             alt="an animal"
             style={{ border: `solid 3px ${color}` }}
           />
         </div>
       </div>
       <div className="gallery">
-        {allImages.map((item, index) => {
+        {images.map((item, index) => {
           const img = item.attributes.url;
           return (
             <img
               src={img}
               alt="an animal"
               key={index}
-              onClick={() => setMain(allImages[index].attributes.url)}
+              onClick={() => setMainImg(images[index].attributes.url)}
             />
           );
         })}
@@ -156,6 +156,7 @@ const Wrapper = styled.div`
     .main {
       width: 600px;
       height: 600px;
+      margin-top: 2.5rem;
       .mask {
         width: 600px;
         height: 600px;
@@ -174,8 +175,9 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 1400px) {
-    width: 50vw;
     padding: 5rem;
+
+    width: 50vw;
   }
 `;
 
