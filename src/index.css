@@ -64,7 +64,7 @@ a {
 
 hr {
   border: none;
-  border-top: 1px solid var(--clr-grey-8);
+  border-top: 1px solid var(--clr-grey-2);
 }
 
 h1,
@@ -99,7 +99,7 @@ h5 {
 }
 
 p {
-  color: var(--clr-grey-3);
+  color: var(--clr-grey-2);
 }
 
 ::-webkit-scrollbar {
