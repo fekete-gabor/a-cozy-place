@@ -45,15 +45,15 @@ const Parallax = () => {
         </div>
       </Wrapper>
     );
+  } else {
+    return (
+      <Wrapper>
+        <div className="img-container">
+          <img src={contactsBG} alt="main" />
+        </div>
+      </Wrapper>
+    );
   }
-
-  return (
-    <Wrapper>
-      <div className="img-container">
-        <img src={contactsBG} alt="main" />
-      </div>
-    </Wrapper>
-  );
 };
 
 const Wrapper = styled.section`

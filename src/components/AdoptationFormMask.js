@@ -124,7 +124,7 @@ const Wrapper = styled.div`
         text-align: center;
         h2 {
           color: whitesmoke;
-          font-size: clamp(1rem, 1.75rem, 2rem);
+          font-size: clamp(2rem, 2.75rem, 3rem);
           span {
             text-transform: uppercase;
             letter-spacing: 6.5px;

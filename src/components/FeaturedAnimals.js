@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { replaceLetters } from "../utils/helpers";
 import { BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -11,23 +11,19 @@ gsap.registerPlugin(ScrollTrigger);
 const FeaturedAnimals = () => {
   const { featured_animals, fetchSingleAnimal } = useMainContext();
 
-  const myRefs = useRef([]);
-
   useEffect(() => {
-    myRefs.current = myRefs.current.slice(0, featured_animals.length);
-
-    myRefs.current.forEach((el, index) => {
+    gsap.utils.toArray(".featured").forEach((animal, i) => {
       gsap.fromTo(
-        el,
+        animal,
         { autoAlpha: 0 },
         {
           duration: 1,
           autoAlpha: 1,
           ease: "none",
-          delay: `${index / 4}`,
+          delay: `${i / 4}`,
           scrollTrigger: {
-            id: `section-${index + 1}`,
-            trigger: el,
+            id: `section-${i + 1}`,
+            trigger: animal,
             start: "top 100%",
           },
         }
@@ -57,7 +53,7 @@ const FeaturedAnimals = () => {
           const img = animal.attributes.img.data[0].attributes.url;
 
           return (
-            <section key={id} ref={(el) => (myRefs.current[index] = el)}>
+            <section key={id} className="featured">
               <header>
                 <img src={img} alt="img of an animal" />
                 <Link

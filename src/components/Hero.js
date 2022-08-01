@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import hero from "../assets/hero.jpg";
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   return (
@@ -25,10 +22,6 @@ const Hero = () => {
 
 const Wrapper = styled.div`
   height: 85vh;
-
-  a:visited {
-    color: unset;
-  }
 
   .banner-container {
     height: 100%;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Error from "./Error";
 import { Link } from "react-router-dom";
 import { replaceLetters } from "../utils/helpers";
@@ -8,17 +8,6 @@ import styled from "styled-components";
 const AnimalFilterList = () => {
   const { current_index, indexes, paginated, changePageIndex } =
     useFilterContext();
-
-  const [formPosition, setFormPosition] = useState();
-
-  useEffect(() => {
-    const form = document.querySelector("#form");
-    setFormPosition(form);
-  }, []);
-
-  const scrollIntoView = (component) => {
-    component.scrollIntoView();
-  };
 
   return (
     <Wrapper>
@@ -89,7 +78,7 @@ const AnimalFilterList = () => {
                   className={current_index === index ? "active btn" : "btn"}
                   onClick={() => {
                     changePageIndex(index);
-                    scrollIntoView(formPosition);
+                    document.querySelector("#form").scrollIntoView();
                   }}
                 >
                   {index + 1}
