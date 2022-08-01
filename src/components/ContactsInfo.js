@@ -11,7 +11,7 @@ const ContactsInfo = () => {
           <p>
             Hétfőn, kedden ZÁRVA vagyunk. Szerdától vasárnapig örökbefogadási
             szándékkal kutyáink 9-13 óra között, cicáink pedig 9-14 óra között
-            látogathatóak, előzetes egyeztetést követően (+36-70-601-6700).
+            látogathatóak, előzetes egyeztetést követően (+36-70-123-4567).
           </p>
           <div>
             <ul className="contacts-list">

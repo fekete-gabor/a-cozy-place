@@ -21,6 +21,7 @@ const animal_filter_reducer = (state, action) => {
 
   if (action.type === UPDATE_FILTERS) {
     let { name, value } = action.payload;
+
     value = value.toLowerCase();
     if (value === "macskák") {
       return {

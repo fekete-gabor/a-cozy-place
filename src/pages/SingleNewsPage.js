@@ -78,7 +78,6 @@ const SingleAnimal = () => {
             <p>{desc}</p>
           </div>
           <IoMdPaw className="icon" />
-          <FeaturedAnimals />
         </article>
         <div>
           <PinnedNews />

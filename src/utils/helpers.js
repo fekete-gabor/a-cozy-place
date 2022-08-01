@@ -92,7 +92,7 @@ export const contacts = [
   {
     id: 2,
     title: "telefonszám",
-    text: "+3630/1234567",
+    text: "+3670/123-4567",
     icon: <AiOutlinePhone />,
   },
   {
@@ -104,26 +104,14 @@ export const contacts = [
   {
     id: 4,
     title: "gyepmester",
-    text: "+3630/7654321",
+    text: "+3630/765-4321",
     icon: <AiOutlinePhone />,
   },
   {
     id: 5,
-    title: "levelezési cím",
-    text: "Állat és - Természetvédők Budaörsi Egyesülete 2040 Budaörs, Lévai u.34.",
-    icon: <AiOutlineMail />,
-  },
-  {
-    id: 6,
     title: "adószám",
-    text: "18693180-1-13",
+    text: "12345678-1-13",
     icon: <AiOutlineCreditCard />,
-  },
-  {
-    id: 7,
-    title: "Külföldről történő utalás esetén EUR bankszámla",
-    text: "HU74 1620 0199 1152 9123 0000 0000 IBAN/SWIFT: HBWEHUHB",
-    icon: <AiOutlineEuroCircle />,
   },
 ];
 

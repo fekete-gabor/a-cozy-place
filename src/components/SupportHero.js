@@ -3,29 +3,35 @@ import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
 import { useMainContext } from "../context/main_context";
 import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const SupportHero = () => {
-  const { animals, all_urls: images } = useMainContext();
+  const { animals, support_header_images: images } = useMainContext();
 
   useEffect(() => {
-    gsap.utils.toArray(".img").forEach((img, index) => {
-      gsap.fromTo(
-        img,
-        { filter: "grayscale(100%)" },
-        {
-          duration: 1,
-          ease: "linear",
-          filter: "grayscale(0%)",
-        },
-        `${index} * 5`
-      );
+    ScrollTrigger.create({
+      trigger: ".support-mask",
+      onEnter: () =>
+        gsap.utils.toArray(".img").forEach((img, index) => {
+          gsap.fromTo(
+            img,
+            { filter: "grayscale(100%)" },
+            {
+              duration: 1,
+              ease: "linear",
+              filter: "grayscale(0%)",
+            },
+            index * 2.5
+          );
+        }),
     });
   }, [animals]);
 
   return (
     <Wrapper>
       <div className="main-container">
-        <div className="layer"></div>
+        <div className="support-mask"></div>
         <div className="bg-container">
           {images.map((img, index) => {
             return <img src={img} alt="main" key={index} className="img" />;
@@ -54,7 +60,7 @@ const Wrapper = styled.section`
     position: relative;
   }
 
-  .layer {
+  .support-mask {
     position: absolute;
     width: 100%;
     height: 100%;

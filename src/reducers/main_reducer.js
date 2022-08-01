@@ -68,7 +68,7 @@ const main_reducer = (state, action) => {
       is_loading: false,
       animals: action.payload,
       featured_animals,
-      all_urls: temp,
+      support_header_images: temp,
     };
   }
 

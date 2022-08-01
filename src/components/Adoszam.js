@@ -1,12 +1,14 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import { contacts } from "../utils/helpers";
 import { AiOutlineCopy } from "react-icons/ai";
 import { useMainContext } from "../context/main_context";
 
 const Adoszam = ({ underlineColor }) => {
   const { setAlert } = useMainContext();
+  const adószám = contacts.find((item) => item.title === "adószám");
 
-  const adószám = useRef(null);
+  const adószámRef = useRef(null);
 
   return (
     <Wrapper id="adoszam">
@@ -23,14 +25,14 @@ const Adoszam = ({ underlineColor }) => {
         onClick={() =>
           setAlert(
             "vágólapra másolva",
-            navigator.clipboard.writeText(adószám.current.textContent)
+            navigator.clipboard.writeText(adószámRef.current.textContent)
           )
         }
       >
         <h2>
-          adószám <span>/</span>
+          {adószám.title} <span>/</span>
         </h2>
-        <h3 ref={adószám}>18693180-1-13</h3>
+        <h3 ref={adószámRef}>{adószám.text}</h3>
         <span>
           <AiOutlineCopy />
         </span>

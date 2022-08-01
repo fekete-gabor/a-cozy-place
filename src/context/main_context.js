@@ -50,7 +50,7 @@ const initialState = {
   paginated: [],
   animal_color: "",
   animal_name: "",
-  all_urls: [],
+  support_header_images: [],
 };
 
 const MainContext = React.createContext();

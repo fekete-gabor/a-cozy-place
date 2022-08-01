@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import useMediaQuery from "../utils/mediaQuery";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -10,25 +9,26 @@ const SingleAnimalGallery = ({ animal }) => {
   const images = animal.img.data;
   const [mainImg, setMainImg] = useState(images[0].attributes.url);
 
-  let mediaQuery = useMediaQuery("(min-width: 600px)");
-
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".mainImg",
-        start: "top center",
+    ScrollTrigger.matchMedia({
+      "(min-width: 600px)": function () {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".mainImg",
+            start: "top center",
+          },
+        });
+
+        tl.from(".mainImg", { scale: 2 })
+          .to(
+            ".mask",
+            { clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)" },
+            0
+          )
+          .to(".mask", { scale: 0.95 });
       },
     });
-    if (mediaQuery) {
-      tl.from(".mainImg", { scale: 2 })
-        .to(
-          ".mask",
-          { clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)" },
-          0
-        )
-        .to(".mask", { scale: 0.95 });
-    }
-  }, [mediaQuery]);
+  }, []);
 
   return (
     <Wrapper

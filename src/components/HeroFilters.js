@@ -2,7 +2,6 @@ import React from "react";
 import cat from "../assets/cat_cartoon_1.jpg";
 import dog from "../assets/dog_cartoon_3.jpg";
 import { HashLink as Link } from "react-router-hash-link";
-import { BsSearch } from "react-icons/bs";
 import { useFilterContext } from "../context/animal_filter_context";
 import styled from "styled-components";
 
@@ -22,7 +21,6 @@ const Cards = () => {
                   name="type"
                   data-value="kutyák"
                 />
-                <BsSearch name="type" data-value="kutyák" />
               </div>
             </Link>
             <div className="card-title">
@@ -38,7 +36,6 @@ const Cards = () => {
                   name="type"
                   data-value="macskák"
                 />
-                <BsSearch name="type" data-value="macskák" />
               </div>
             </Link>
             <div className="card-title">
@@ -74,9 +71,6 @@ const CardWrapper = styled.section`
 
   .card {
     position: relative;
-    background-color: #222;
-    border-radius: 50%;
-    transition: var(--transition);
     margin: 0 auto 1rem;
     max-width: 225px;
     max-height: 225px;
@@ -86,24 +80,9 @@ const CardWrapper = styled.section`
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    svg {
-      position: absolute;
-      color: var(--clr-primary-1);
-      font-size: 4rem;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       transition: var(--transition);
-      opacity: 0;
-      border-radius: 50%;
-    }
-    &:hover {
-      img {
-        opacity: 0.5;
-      }
-      svg {
-        opacity: 1;
+      &:hover {
+        border: solid 2px orange;
       }
     }
   }

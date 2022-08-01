@@ -116,7 +116,7 @@ const Wrapper = styled.section`
       }
       &:hover div {
         transition: var(--transition);
-        opacity: 0;
+        display: none;
       }
       div {
         cursor: pointer;
@@ -124,6 +124,7 @@ const Wrapper = styled.section`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        display: flex;
         h2 {
           cursor: pointer;
           color: whitesmoke;
