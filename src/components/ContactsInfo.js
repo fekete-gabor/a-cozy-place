@@ -37,7 +37,7 @@ const ContactsInfo = () => {
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: fit-content;
   display: grid;
   text-align: center;
   padding: 3rem 1rem 0;

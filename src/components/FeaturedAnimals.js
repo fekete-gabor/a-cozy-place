@@ -37,7 +37,7 @@ const FeaturedAnimals = () => {
         <h2>ők is gazdira várnak!</h2>
       </div>
       <div className="main-container">
-        {featured_animals.map((animal, index) => {
+        {featured_animals.map((animal) => {
           const { id } = animal;
           const {
             breed,

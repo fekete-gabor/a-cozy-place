@@ -3,6 +3,7 @@ import {
   CLOSE_SIDEBAR,
   SET_ALERT,
   REMOVE_ALERT,
+  CHECK_IF_RESERVED,
   FETCH_ANIMALS_BEGIN,
   FETCH_ANIMALS_SUCCESS,
   FETCH_ANIMALS_ERROR,
@@ -40,6 +41,13 @@ const main_reducer = (state, action) => {
 
   if (action.type === REMOVE_ALERT) {
     return { ...state, alert: false, alertText: "" };
+  }
+
+  if (action.type === CHECK_IF_RESERVED) {
+    return {
+      ...state,
+      animal_reserved: action.payload === "lefoglalva" ? true : false,
+    };
   }
 
   // ***** FETCH ANIMALS *****

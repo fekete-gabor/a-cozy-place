@@ -13,6 +13,7 @@ import {
   CLOSE_SIDEBAR,
   SET_ALERT,
   REMOVE_ALERT,
+  CHECK_IF_RESERVED,
   FETCH_ANIMALS_BEGIN,
   FETCH_ANIMALS_SUCCESS,
   FETCH_ANIMALS_ERROR,
@@ -50,6 +51,7 @@ const initialState = {
   paginated: [],
   animal_color: "",
   animal_name: "",
+  animal_reserved: false,
   support_header_images: [],
 };
 
@@ -97,6 +99,10 @@ export const MainProvider = ({ children }) => {
     } catch (error) {
       dispatch({ type: FETCH_SINGLE_ANIMAL_ERROR });
     }
+  };
+
+  const checkIfReserved = (status) => {
+    dispatch({ type: CHECK_IF_RESERVED, payload: status });
   };
 
   // fetch news
@@ -154,6 +160,7 @@ export const MainProvider = ({ children }) => {
         closeSidebar,
         setAlert,
         stopAlert,
+        checkIfReserved,
         fetchSingleAnimal,
         fetchSingleNews,
         changePageIndex,

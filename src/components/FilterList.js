@@ -26,6 +26,7 @@ const AnimalFilterList = () => {
               date_of_registry: dor,
               desc,
             } = animal.attributes;
+            const status = animal.attributes.status;
             const img = animal.attributes.img.data[0].attributes.url;
 
             return (
@@ -47,18 +48,25 @@ const AnimalFilterList = () => {
                     {gender && <p>nem: {gender},</p>}
                     {dob && <p>születési idő: {dob},</p>}
                     {dor && <p>hozzánk érkezett: {dor},</p>}
+                    {status && (
+                      <p style={{ textDecoration: "underline orangered" }}>
+                        {status}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <p>{desc && `${desc.substring(0, 70)}...`}</p>
                   </div>
-                  <div className="link-container">
-                    <Link
-                      to={`${replaceLetters(type)}/${id}`}
-                      style={{ background: color }}
-                    >
-                      Részletek, {type === "kutyák" ? "Woof!" : "Meow!"}
-                    </Link>
-                  </div>
+                  {status !== "lefoglalva" && (
+                    <div className="link-container">
+                      <Link
+                        to={`${replaceLetters(type)}/${id}`}
+                        style={{ background: color }}
+                      >
+                        Részletek, {type === "kutyák" ? "Woof!" : "Meow!"}
+                      </Link>
+                    </div>
+                  )}
                 </article>
               </section>
             );
@@ -150,9 +158,7 @@ const Wrapper = styled.div`
         padding: 1rem;
         margin: 1rem;
         border-radius: 25px;
-        background: orange;
         text-transform: uppercase;
-
         transition: var(--transition);
         &:hover {
           background-color: orangered;

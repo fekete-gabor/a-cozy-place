@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { IoMdPaw, IoIosPaw } from "react-icons/io";
+import { useMainContext } from "../context/main_context";
 
 const SingleAnimalInfo = ({ animal }) => {
   const {
@@ -11,10 +12,17 @@ const SingleAnimalInfo = ({ animal }) => {
     color,
     gender,
     type,
+    status,
     date_of_birth: dob,
     date_of_registry: dor,
     things_i_like: like,
   } = animal;
+
+  const { checkIfReserved } = useMainContext();
+
+  useEffect(() => {
+    checkIfReserved(status);
+  }, []);
 
   return (
     <Wrapper>
@@ -59,6 +67,20 @@ const SingleAnimalInfo = ({ animal }) => {
               hozzánk érkezett:
             </p>
             <p>{dor}</p>
+          </div>
+        )}
+        {status && (
+          <div>
+            <p
+              style={{
+                textDecoration: "underline orangered",
+                color: "red",
+                textTransform: "uppercase",
+                fontSize: "2rem",
+              }}
+            >
+              {status}
+            </p>
           </div>
         )}
       </div>
