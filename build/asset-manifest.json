@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.452ec5b4.css",
+    "main.js": "/static/js/main.5646cede.js",
+    "static/media/l3.png": "/static/media/l3.50517d5337cfa313d406.png",
+    "static/media/l5.png": "/static/media/l5.e399ab5143dcbfb40c8d.png",
+    "static/media/l1.png": "/static/media/l1.df45e81d9d2b18eedbf4.png",
+    "static/media/l4.png": "/static/media/l4.090818670ef0148d2084.png",
+    "static/media/contacts_bg.jpg": "/static/media/contacts_bg.013c49ea292ec17b80bf.jpg",
+    "static/media/about_bg_3.jpg": "/static/media/about_bg_3.2cddbf01808b01758e4e.jpg",
+    "static/media/l2.png": "/static/media/l2.624711f0d4d863be3e71.png",
+    "static/media/support_bg.jpg": "/static/media/support_bg.cd28f448a851dffb61a5.jpg",
+    "static/media/support_bg_2.jpg": "/static/media/support_bg_2.236ef89ed97092e39430.jpg",
+    "static/media/about_bg_2.jpg": "/static/media/about_bg_2.71c9c180e13d9e94e2e6.jpg",
+    "static/media/about_bg.jpg": "/static/media/about_bg.c7bdb365d954dbd855e2.jpg",
+    "static/media/form_mask.jpg": "/static/media/form_mask.a42f0f7090e109c0f3f5.jpg",
+    "static/media/intern.jpg": "/static/media/intern.df420903a25363e0830e.jpg",
+    "static/media/dog_large_bg.jpg": "/static/media/dog_large_bg.15d95dc13dbabd2ed10a.jpg",
+    "static/media/dog_bg.jpg": "/static/media/dog_bg.e35b7fa8af37fb0decf2.jpg",
+    "static/media/hero.jpg": "/static/media/hero.dca0e40de7ba4f9c81e2.jpg",
+    "static/media/news_bg.jpg": "/static/media/news_bg.e6e3bfc26c431ad211aa.jpg",
+    "static/media/cat_bg.jpg": "/static/media/cat_bg.0e657b562196d6218295.jpg",
+    "static/media/tacsi_1.jpg": "/static/media/tacsi_1.c0683264e8f639c259cf.jpg",
+    "static/media/dog_cartoon_4.jpg": "/static/media/dog_cartoon_4.6ea20dc1d3f12bfff0fd.jpg",
+    "static/media/dog_cartoon_3.jpg": "/static/media/dog_cartoon_3.c9d9938292cd05a2c7f8.jpg",
+    "static/media/dog_cartoon_1.jpg": "/static/media/dog_cartoon_1.51370bd0b779988ecb24.jpg",
+    "static/media/logo.png": "/static/media/logo.26a36ed4a4b9e3effbb6.png",
+    "index.html": "/index.html",
+    "main.452ec5b4.css.map": "/static/css/main.452ec5b4.css.map",
+    "main.5646cede.js.map": "/static/js/main.5646cede.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.452ec5b4.css",
+    "static/js/main.5646cede.js"
+  ]
+}
