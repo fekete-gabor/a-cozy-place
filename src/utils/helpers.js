@@ -7,7 +7,6 @@ import {
   AiOutlinePhone,
   AiOutlineEnvironment,
   AiOutlineCreditCard,
-  AiOutlineEuroCircle,
 } from "react-icons/ai";
 
 export const links = [

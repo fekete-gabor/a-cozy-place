@@ -22,6 +22,7 @@ const SingleAnimalInfo = ({ animal }) => {
 
   useEffect(() => {
     checkIfReserved(status);
+    // eslint-disable-next-line
   }, []);
 
   return (
