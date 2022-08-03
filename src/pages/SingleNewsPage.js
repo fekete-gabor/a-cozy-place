@@ -3,15 +3,10 @@ import styled from "styled-components";
 import { IoMdPaw } from "react-icons/io";
 import { formatMyDate } from "../utils/helpers";
 import logo from "../assets/textless_logo.png";
-import {
-  Error,
-  Adoszam,
-  PinnedNews,
-  FeaturedAnimals,
-  Spinner,
-} from "../components";
+import { Error, Adoszam, PinnedNews, Spinner } from "../components";
 import { useMainContext } from "../context/main_context";
 import { useParams, useNavigate } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
 const SingleAnimal = () => {
   const { id } = useParams();
@@ -75,7 +70,7 @@ const SingleAnimal = () => {
             </div>
           </header>
           <div className="desc-container">
-            <p>{desc}</p>
+            <ReactMarkdown children={desc} />
           </div>
           <IoMdPaw className="icon" />
         </article>

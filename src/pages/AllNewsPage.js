@@ -72,7 +72,7 @@ const News = () => {
 };
 
 const Wrapper = styled.section`
-  min-height: 100vh;
+  height: fit-content;
   text-align: center;
   padding: 2rem 0;
   background-color: whitesmoke;
@@ -136,7 +136,7 @@ const Wrapper = styled.section`
 
   .img-container {
     min-height: 300px;
-    max-height: 400px;
+    max-height: 300px;
     overflow: hidden;
     img {
       width: 100%;
