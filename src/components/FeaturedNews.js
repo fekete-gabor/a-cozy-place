@@ -121,7 +121,7 @@ const Wrapper = styled.section`
 
   .img-container {
     min-height: 300px;
-    max-height: 400px;
+    height: 400px;
     overflow: hidden;
     img {
       width: 100%;

@@ -13,7 +13,7 @@ const Cards = () => {
       <div className="flex-container">
         <div className="main-container">
           <div className="card-container">
-            <Link to="gazdikereso#form">
+            <Link to="gazdikereso#form" name="type" data-value="kutyák">
               <div className="card" onClick={(e) => updateFilters(e)}>
                 <img
                   src={dog}
