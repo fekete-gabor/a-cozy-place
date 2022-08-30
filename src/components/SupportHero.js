@@ -1,32 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
 import { useMainContext } from "../context/main_context";
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 const SupportHero = () => {
-  const { animals, support_header_images: images } = useMainContext();
-
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: ".support-mask",
-      onEnter: () =>
-        gsap.utils.toArray(".img").forEach((img, index) => {
-          gsap.fromTo(
-            img,
-            { filter: "grayscale(100%)" },
-            {
-              duration: 1,
-              ease: "linear",
-              filter: "grayscale(0%)",
-            },
-            index * 2.5
-          );
-        }),
-    });
-  }, [animals]);
+  const { support_header_images: images } = useMainContext();
 
   return (
     <Wrapper>

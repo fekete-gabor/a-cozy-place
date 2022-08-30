@@ -152,10 +152,12 @@ p {
   padding: 80px 0;
 }
 
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
+@media screen and (min-width: 300px) {
+  .section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
 }
 
 @media screen and (min-width: 992px) {

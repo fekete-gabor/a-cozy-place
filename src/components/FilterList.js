@@ -6,12 +6,21 @@ import { useFilterContext } from "../context/animal_filter_context";
 import styled from "styled-components";
 
 const AnimalFilterList = () => {
-  const { current_index, indexes, paginated, changePageIndex } =
-    useFilterContext();
+  const {
+    all_animals,
+    filtered_animals,
+    current_index,
+    indexes,
+    paginated,
+    changePageIndex,
+  } = useFilterContext();
 
   return (
     <Wrapper>
       <section className="container" id="form">
+        <div className="results-container">
+          <h3>{`${filtered_animals.length} / ${all_animals.length} találat`}</h3>
+        </div>
         {paginated ? (
           paginated.map((animal, index) => {
             const { id } = animal;
@@ -108,6 +117,11 @@ const Wrapper = styled.div`
     display: grid;
     margin: 0 auto;
     gap: 3rem;
+    width: fit-content;
+  }
+
+  .results-container {
+    padding: 0rem 1rem;
   }
 
   .section-center {
@@ -117,6 +131,7 @@ const Wrapper = styled.div`
     padding: 1rem 0.5rem;
     gap: 2rem 3rem;
     margin-bottom: 1rem;
+    width: 100vw;
     header {
       max-height: 400px;
       border-bottom-left-radius: 25px;
@@ -153,10 +168,11 @@ const Wrapper = styled.div`
     .link-container {
       margin-top: 3rem;
       a {
+        font-size: clamp(0.5rem, 1.15rem, 1.2rem);
         margin-top: 1.5rem;
         color: whitesmoke;
         padding: 1rem;
-        margin: 1rem;
+
         border-radius: 25px;
         text-transform: uppercase;
         transition: var(--transition);
@@ -202,12 +218,11 @@ const Wrapper = styled.div`
           letter-spacing: var(--spacing);
         }
       }
-    }
 
-    .link-container {
-      a {
-        padding: 1rem;
-        margin: 1rem;
+      .link-container {
+        a {
+          margin: 1rem;
+        }
       }
     }
   }
