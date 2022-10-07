@@ -33,7 +33,6 @@ All images were taken from [Pexels](https://www.pexels.com) and [Unsplash](https
 - download or clone repository
 - run **npm install**
 - run **npm start**
--
 
 ## PROJECT STATUS
 
