@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useMainContext } from "../context/main_context";
 
 const AdoptationForm = () => {
   const { animal_name: name } = useMainContext();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <Wrapper>
