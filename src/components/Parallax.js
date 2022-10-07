@@ -15,49 +15,48 @@ const Parallax = () => {
   const mediaQuery = useMediaQuery("(min-width: 1080px)");
 
   useEffect(() => {
-    ScrollTrigger.matchMedia({
-      "(min-width: 1080px)": function () {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".parallax",
-            start: "top 0%",
-            scrub: true,
-          },
-        });
-        gsap.utils.toArray(".parallax").forEach((layer) => {
-          const depth = layer.dataset.depth;
-          const movement = -(layer.offsetHeight * depth);
-          tl.to(layer, { y: movement, ease: "none" }, 0);
-        });
-      },
+    gsap.utils.toArray(".parallax").forEach((layer) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".parallax-container",
+          start: "top 0%",
+          end: "+=100%",
+          scrub: true,
+        },
+      });
+
+      const depth = layer.dataset.depth;
+      const movement = -(layer.offsetHeight * depth);
+
+      tl.to(layer, { y: movement, ease: "none" }, 0);
     });
   }, [mediaQuery]);
 
-  if (mediaQuery) {
+  if (!mediaQuery) {
     return (
       <Wrapper>
-        <div className="img-container">
-          <img src={layer1} className="parallax" data-depth="0.1" alt="layer" />
-          <img src={layer2} className="parallax" data-depth="0.2" alt="layer" />
-          <img src={layer3} className="parallax" data-depth="0.4" alt="layer" />
-          <img src={layer4} className="parallax" data-depth="0.5" alt="layer" />
-          <img src={layer5} className="parallax" data-depth="0.6" alt="layer" />
-        </div>
-      </Wrapper>
-    );
-  } else {
-    return (
-      <Wrapper>
-        <div className="img-container">
+        <div className="parallax-container">
           <img src={contactsBG} alt="main" />
         </div>
       </Wrapper>
     );
   }
+
+  return (
+    <Wrapper>
+      <div className="parallax-container">
+        <img src={layer1} className="parallax" data-depth="0.1" alt="layer" />
+        <img src={layer2} className="parallax" data-depth="0.2" alt="layer" />
+        <img src={layer3} className="parallax" data-depth="0.3" alt="layer" />
+        <img src={layer4} className="parallax" data-depth="0.4" alt="layer" />
+        <img src={layer5} className="parallax" data-depth="0.5" alt="layer" />
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
-  .img-container {
+  .parallax-container {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -69,7 +68,7 @@ const Wrapper = styled.section`
   }
 
   @media screen and (min-width: 1080px) {
-    .img-container {
+    .parallax-container {
       img {
         position: fixed;
         z-index: -1;

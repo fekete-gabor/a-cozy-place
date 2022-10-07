@@ -29,6 +29,7 @@ const Contacts = () => {
 
 const Wrapper = styled.section`
   overflow: hidden;
+  height: fit-content;
 
   .contacts-container {
     display: grid;
