@@ -1,12 +1,21 @@
 import React, { useEffect } from "react";
-import supportBG2 from "../assets/support_bg_2.jpg";
 import supportBG from "../assets/support_bg.jpg";
+import supportBG2 from "../assets/support_bg_2.jpg";
+import useMediaQuery from "../utils/mediaQuery";
 import styled from "styled-components";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Tamogatas = () => {
+  const mediaQuery = useMediaQuery("(min-width: 1300px)");
+
+  useEffect(() => {
+    if (!mediaQuery) {
+      gsap.set([".left", ".right"], { filter: "grayscale(0%)" });
+    }
+  }, [mediaQuery]);
+
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width:1300px)": function () {

@@ -1,11 +1,20 @@
 import React, { useEffect } from "react";
 import intern from "../assets/intern.jpg";
+import useMediaQuery from "../utils/mediaQuery";
 import styled from "styled-components";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Internship = () => {
+  const mediaQuery = useMediaQuery("(min-width: 1300px)");
+
+  useEffect(() => {
+    if (!mediaQuery) {
+      gsap.set(".intern", { filter: "grayscale(0%)" });
+    }
+  }, [mediaQuery]);
+
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width:1300px)": function () {
