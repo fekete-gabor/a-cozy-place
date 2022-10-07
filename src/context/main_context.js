@@ -3,12 +3,6 @@ import axios from "axios";
 import reducer from "../reducers/main_reducer";
 import pagination from "../utils/pagination";
 import {
-  all_animals_url,
-  single_animal_url,
-  all_news_url,
-  single_news_url,
-} from "../utils/helpers";
-import {
   OPEN_SIDEBAR,
   CLOSE_SIDEBAR,
   SET_ALERT,
@@ -54,6 +48,11 @@ const initialState = {
   animal_reserved: false,
   support_header_images: [],
 };
+
+const all_animals_url = process.env.REACT_APP_ALL_ANIMALS_URL;
+const single_animal_url = process.env.REACT_APP_SINGLE_ANIMAL_URL;
+const all_news_url = process.env.REACT_APP_ALL_NEWS_URL;
+const single_news_url = process.env.REACT_APP_SINGLE_NEWS_URL;
 
 const MainContext = React.createContext();
 

@@ -149,15 +149,3 @@ export const formatMyDate = (value) => {
   const years = new Date(value).getFullYear();
   return `${years}/${months}/${days} - ${hours}:${minutes}`;
 };
-
-// fetch animals
-export const all_animals_url = `https://a-cozy-place.up.railway.app/api/animals?populate=*`;
-
-// fetch single animal by ID
-export const single_animal_url = `https://a-cozy-place.up.railway.app/api/animals/`;
-
-// fetch news
-export const all_news_url = `https://a-cozy-place.up.railway.app/api/blog-posts?populate=*`;
-
-// fetch single news
-export const single_news_url = `https://a-cozy-place.up.railway.app/api/blog-posts/`;
