@@ -7,7 +7,7 @@ const GoogleMaps = () => {
       width="100%"
       height="450"
       title="GoogleMaps"
-      style={{ border: 0, display: "block" }}
+      style={{ border: 0, display: "block", background: "white" }}
       allowFullScreen=""
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
