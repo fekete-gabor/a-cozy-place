@@ -8,7 +8,7 @@ Access my site here [Link](https://a-cozy-place.netlify.app).
 
 ## ABOUT THE SITE
 
-My first React project. After finishing my Udemy course, I was pretty excited to try and build something on my own. It was pretty challenging at first, especially since not only React was new to me, but also fetching data from an API, animating with GSAP and all the backend stuff. I always knew that I want to create something related to animals, so atleast that part was easy. All in all, it was a pretty exciting and fun project.
+My first React project. After finishing my Udemy course, I was pretty excited to try and build something on my own. It was pretty challenging at first, especially since not only React was new to me, but also fetching data from an API, animating with GSAP, all the backend stuff etc. I always knew that I want to create something related to animals, so atleast that part was easy. All in all, it was a pretty exciting and fun project.
 
 ## PICTURES
 
