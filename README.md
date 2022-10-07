@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+## PROJECT TITLE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A cozy place - animal shelter
 
-## Available Scripts
+## DEMO LINK
 
-In the project directory, you can run:
+Access my site here [Link](https://a-cozy-place.netlify.app).
 
-### `npm start`
+## ABOUT THE SITE
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My first React project. After finishing my Udemy course, I was pretty excited to try and build something on my own. It was pretty challenging at first, especially since not only React was new to me, but also fetching data from an API, animating with GSAP and all the backend stuff. I always knew that I want to create something related to animals, so atleast that part was easy. All in all, it was a pretty exciting and fun project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## PICTURES
 
-### `npm test`
+All images were taken from [Pexels](https://www.pexels.com) and [Unsplash](https://unsplash.com).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## TECHNOLOGIES
 
-### `npm run build`
+- CSS
+- JavaScript(ES6+)
+- React
+- React Router v6
+- GSAP
+- Axios
+- Styled Components
+- Strapi
+- Heroku / Railway.app
+- Netlify
+- Cloudinary
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## SETUP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- download or clone repository
+- run **npm install**
+- run **npm start**
+-
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## PROJECT STATUS
 
-### `npm run eject`
+Completed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## CREDITS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Budaörsi állatmenhely](https://www.budaorsiallatmenhely.hu) - I got inspired by them a lot, since I wasn't sure what kind of content do I need for a shelter-related site. I also really liked their design.
