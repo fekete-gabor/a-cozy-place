@@ -85,7 +85,7 @@ export const contacts = [
   {
     id: 1,
     title: "email",
-    text: "a_cozy_place@outlook.com",
+    text: "info@a_cozy_place.com",
     icon: <AiOutlineMail />,
   },
   {
@@ -97,7 +97,7 @@ export const contacts = [
   {
     id: 3,
     title: "cím",
-    text: "2045 Törökbálint, Hrsz: 097/98",
+    text: "8900 Zalaegerszeg, Felsődűlő utca",
     icon: <AiOutlineEnvironment />,
   },
   {
