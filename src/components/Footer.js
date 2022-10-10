@@ -7,7 +7,14 @@ const Footer = () => {
     <Wrapper>
       <p>
         &copy; {date} <span>a cozy place</span>, all rights reserved. created by{" "}
-        <span className="heart">&hearts;</span> <span>Gábor Fekete</span>
+        <span className="heart">&hearts;</span>{" "}
+        <a
+          href="https://fekete-gabor.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Gábor Fekete
+        </a>
       </p>
     </Wrapper>
   );
@@ -25,7 +32,7 @@ const Wrapper = styled.footer`
     font-size: 1.25rem;
     color: whitesmoke;
   }
-  span {
+  a {
     color: var(--clr-primary-1);
   }
 
