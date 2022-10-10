@@ -85,6 +85,7 @@ export const MainProvider = ({ children }) => {
       const payload = await response.data.data;
       dispatch({ type: FETCH_ANIMALS_SUCCESS, payload });
     } catch (error) {
+      if (error.response.status === 401) window.location.reload();
       dispatch({ type: FETCH_ANIMALS_ERROR });
     }
   };
