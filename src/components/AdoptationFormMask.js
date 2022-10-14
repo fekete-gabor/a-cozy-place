@@ -37,14 +37,15 @@ const FormMask = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".form-main",
-        start: "top 90%",
+        start: "top center",
         end: "bottom center",
         scrub: true,
       },
     });
     gsap.set(".info", { autoAlpha: 0 });
+    gsap.set(".form-main", { clipPath: "circle(50% at 100% 50%)" });
 
-    tl.to(".form-mask", {
+    tl.to(".form-main", {
       clipPath: "circle(100% at 50% 50%)",
     }).to(".info", { autoAlpha: 1 }, 0);
   }, []);
@@ -102,7 +103,6 @@ const Wrapper = styled.div`
       width: 100vw;
       height: 100%;
       overflow: hidden;
-      clip-path: circle(50% at 100% 50%);
       img {
         width: 100vw;
         height: 100%;
