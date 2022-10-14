@@ -51,11 +51,11 @@ const FormMask = () => {
   }, []);
 
   return (
-    <Wrapper className="wrapper">
-      <div
-        className="form-main"
-        style={{ background: `linear-gradient(45deg, ${color} 0%, #fff 80%)` }}
-      >
+    <Wrapper
+      className="wrapper"
+      style={{ background: `linear-gradient(45deg, ${color} 0%, #fff 80%)` }}
+    >
+      <div className="form-main">
         <div className="form-mask">
           <img src={formMask} alt="dog in a party hat" />
           <div className="info">
