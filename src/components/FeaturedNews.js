@@ -78,6 +78,7 @@ const Wrapper = styled.section`
         padding: 1.5rem 2rem 0.5rem;
       }
       .date-container {
+        cursor: default;
         display: flex;
         width: max-content;
         position: absolute;
