@@ -88,9 +88,11 @@ const AnimalFilterBackgrounds = () => {
         </div>
       </div>
       <div className="btn-container" onClick={() => clearAnimalFilters()}>
-        <button onClick={() => clearAnimalFilters()}>
-          nem tudok dönteni, mutasd mindet
-        </button>
+        <Link to="#form">
+          <button onClick={() => clearAnimalFilters()}>
+            nem tudok dönteni, mutasd mindet
+          </button>
+        </Link>
       </div>
     </Wrapper>
   );
