@@ -45,9 +45,13 @@ const FormMask = () => {
     gsap.set(".info", { autoAlpha: 0 });
     gsap.set(".form-main", { clipPath: "circle(50% at 100% 50%)" });
 
-    tl.to(".form-main", {
-      clipPath: "circle(100% at 50% 50%)",
-    }).to(".info", { autoAlpha: 1 }, 0);
+    tl.to(
+      ".form-main",
+      {
+        clipPath: "circle(100% at 50% 50%)",
+      },
+      "-=1"
+    ).to(".info", { autoAlpha: 1 }, "-=1");
   }, []);
 
   return (
@@ -123,7 +127,7 @@ const Wrapper = styled.div`
         z-index: 2;
         text-align: center;
         h2 {
-          color: whitesmoke;
+          color: white;
           font-size: clamp(2rem, 2.75rem, 3rem);
           span {
             text-transform: uppercase;
