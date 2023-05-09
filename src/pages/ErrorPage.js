@@ -27,7 +27,7 @@ const Wrapper = styled.section`
   width: auto;
   display: grid;
   place-items: center;
-  background-color: whitesmoke;
+  background-color: white;
 
   .img-container {
     max-width: 600px;
