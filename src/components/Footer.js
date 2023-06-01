@@ -8,11 +8,7 @@ const Footer = () => {
       <p>
         &copy; {date} <span>a cozy place</span>, all rights reserved. created by{" "}
         <span className="heart">&hearts;</span>{" "}
-        <a
-          href="https://fekete-gabor.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://feketegabor.dev/" target="_blank" rel="noreferrer">
           Gábor Fekete
         </a>
       </p>
