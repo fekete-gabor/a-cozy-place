@@ -17,10 +17,10 @@ const PinnedNews = () => {
       <div className="main-container">
         {featured_news.map((post) => {
           const { id } = post;
-          const { author, title, desc, publishedAt: date } = post.attributes;
+          const { author, title, publishedAt: date } = post.attributes;
+          const desc = post.attributes.desc[0].children[0].text;
           const img =
-            post.attributes.blog_img.data &&
-            post.attributes.blog_img.data.attributes.url;
+            post.attributes.img.data && post.attributes.img.data.attributes.url;
 
           return (
             <article key={id}>
