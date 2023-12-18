@@ -145,7 +145,7 @@ const Wrapper = styled.section`
     width: 100vw;
     padding: 1rem;
     gap: 1rem;
-    background-color: whitesmoke;
+    background-color: white;
     margin-bottom: 3.5rem;
   }
 
