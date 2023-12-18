@@ -147,7 +147,7 @@ const Wrapper = styled.section`
       margin: 0.5rem;
       padding: 1rem 0;
       border-radius: 25px;
-      background: whitesmoke;
+      background: white;
       p {
         font-size: 1.25rem;
       }
