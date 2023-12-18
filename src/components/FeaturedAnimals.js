@@ -43,13 +43,13 @@ const FeaturedAnimals = () => {
             breed,
             date_of_birth: dob,
             date_of_registry: dor,
-            desc,
             gender,
             name,
             size,
             type,
             color,
           } = animal.attributes;
+          const desc = animal.attributes.desc[0].children[0].text;
           const img = animal.attributes.img.data[0].attributes.url;
 
           return (
