@@ -33,9 +33,9 @@ const AnimalFilterList = () => {
               color,
               date_of_birth: dob,
               date_of_registry: dor,
-              desc,
             } = animal.attributes;
             const status = animal.attributes.status;
+            const desc = animal.attributes.desc[0].children[0].text;
             const img = animal.attributes.img.data[0].attributes.url;
 
             return (
