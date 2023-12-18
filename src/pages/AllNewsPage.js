@@ -22,10 +22,11 @@ const News = () => {
         {paginated &&
           paginated.map((post) => {
             const { id } = post;
-            const { author, title, desc, publishedAt: date } = post.attributes;
+            const { author, title, publishedAt: date } = post.attributes;
+            const desc = post.attributes.desc[0].children[0].text;
             const img =
-              post.attributes.blog_img.data &&
-              post.attributes.blog_img.data.attributes.url;
+              post.attributes.img.data &&
+              post.attributes.img.data.attributes.url;
 
             return (
               <article key={id}>
@@ -75,7 +76,7 @@ const Wrapper = styled.section`
   height: fit-content;
   text-align: center;
   padding: 2rem 0;
-  background-color: whitesmoke;
+  background-color: white;
 
   .main-container {
     display: grid;
@@ -87,7 +88,7 @@ const Wrapper = styled.section`
       display: grid;
       grid-template-rows: auto 1fr;
       position: relative;
-      background-color: whitesmoke;
+      background-color: white;
       border-bottom: solid 2px purple;
       div {
         padding: 1.5rem 2rem 0.5rem;
