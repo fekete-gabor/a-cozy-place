@@ -52,7 +52,7 @@ const SingleAnimal = () => {
   }
 
   const { author, title, publishedAt: date } = post.attributes;
-  const desc = post.attributes.desc[0].children[0].text;
+  const desc = post.attributes.desc;
 
   return (
     <Wrapper>
@@ -71,7 +71,14 @@ const SingleAnimal = () => {
             </div>
           </header>
           <div className="desc-container">
-            <ReactMarkdown children={desc} />
+            {desc.map((item, i) => {
+              const text = item.children[0].text;
+              return (
+                <div className="desc" key={i}>
+                  <ReactMarkdown children={text} />
+                </div>
+              );
+            })}
           </div>
           <IoMdPaw className="icon" />
         </article>
@@ -120,6 +127,9 @@ const Wrapper = styled.section`
   }
 
   .desc-container {
+    div {
+      margin-bottom: 2rem;
+    }
     p {
       font-weight: 600;
       font-size: 1.1rem;
