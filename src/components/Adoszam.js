@@ -43,7 +43,7 @@ const Adoszam = ({ underlineColor }) => {
 
 const Wrapper = styled.div`
   z-index: 1;
-  background-color: whitesmoke;
+  background-color: white;
 
   .title {
     border-radius: 25px;
