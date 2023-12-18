@@ -6,7 +6,6 @@ import { useMainContext } from "../context/main_context";
 const SingleAnimalInfo = ({ animal }) => {
   const {
     name,
-    desc,
     breed,
     size,
     color,
@@ -17,6 +16,7 @@ const SingleAnimalInfo = ({ animal }) => {
     date_of_registry: dor,
     things_i_like: like,
   } = animal;
+  const desc = animal.desc[0].children[0].text;
 
   const { checkIfReserved } = useMainContext();
 
