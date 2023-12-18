@@ -20,8 +20,7 @@ const PinnedNews = () => {
           const { id } = post;
           const { title, publishedAt: date } = post.attributes;
           const img =
-            post.attributes.blog_img.data &&
-            post.attributes.blog_img.data.attributes.url;
+            post.attributes.img.data && post.attributes.img.data.attributes.url;
 
           return (
             <div key={id} className="container">
