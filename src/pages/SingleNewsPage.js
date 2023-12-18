@@ -51,7 +51,8 @@ const SingleAnimal = () => {
     );
   }
 
-  const { author, title, desc, publishedAt: date } = post.attributes;
+  const { author, title, publishedAt: date } = post.attributes;
+  const desc = post.attributes.desc[0].children[0].text;
 
   return (
     <Wrapper>
@@ -92,6 +93,7 @@ const Wrapper = styled.section`
   .main {
     display: grid;
     padding: 2rem 0.5rem;
+    background: white;
   }
 
   .author-container {
